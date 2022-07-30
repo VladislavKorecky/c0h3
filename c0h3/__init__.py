@@ -1,7 +1,7 @@
 from flask import Flask
 
 
-def create_app(config_dict: dict = None):
+def create_app(config_dict: dict = None) -> Flask:
     """
     Create and return flask app.
 
