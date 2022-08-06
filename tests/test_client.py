@@ -3,10 +3,8 @@ from flask.testing import FlaskClient
 
 def test_client(flask_client: FlaskClient) -> None:
     """
-    Test if flask client was created successfully.
-
-    Args:
-        flask_client (FlaskClient): Flask client passed by the flask_client fixture.
+    GIVEN a flask client
+    THEN test if the client is not None and is an instance of FlaskClient.
     """
 
     assert flask_client is not None
