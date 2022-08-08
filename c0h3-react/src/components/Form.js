@@ -22,6 +22,14 @@ export default function Form() {
         })
     }
 
+    function filterColorData() {
+        const colorDataValues = Object.values(colorData)
+        const results = colorDataValues.filter((sample) => sample.text.startsWith(formData.searchField));
+        return results
+    }
+
+    console.log(filterColorData())
+
     return (
         <form>
             <input
