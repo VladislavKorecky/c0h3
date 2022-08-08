@@ -1,24 +1,11 @@
-import { useState, useEffect } from "react"
+import Form from "./components/Form";
 
 
 export default function App() {
-    const [heading, setHeading] = useState("")
-
-    useEffect(() => {
-        fetch("http://127.0.0.1:5000/")
-            .then(res => {
-                if (res.ok) {
-                    return res.json()
-                }
-            })
-            .then(data => {
-                setHeading(data.message)
-            })
-            .then(error => console.log(error))
-    }, [])
-
-
     return (
-        <h1>{heading}</h1>
+        <>
+            <h1>Welcome to C0H3!</h1>
+            <Form />
+        </>
     )
 }
