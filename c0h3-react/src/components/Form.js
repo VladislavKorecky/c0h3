@@ -1,5 +1,7 @@
 import { useState } from "react"
 
+import colorData from "../color_db_data"
+
 
 export default function Form() {
     const [formData, setFormData] = useState(getDefaultFormData());
@@ -20,14 +22,8 @@ export default function Form() {
         })
     }
 
-    function handleSubmit(event) {
-        event.preventDefault()
-        console.log(formData)
-        setFormData(getDefaultFormData())
-    }
-
     return (
-        <form onSubmit={handleSubmit}>
+        <form>
             <input
                 type="text"
                 placeholder="Emotion/Effect"
@@ -35,7 +31,6 @@ export default function Form() {
                 name="searchField"
                 value={formData.searchField}
             />
-            <button>Submit</button>
         </form>
     )
 }
