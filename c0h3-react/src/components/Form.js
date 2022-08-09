@@ -4,16 +4,14 @@ import colorData from "../color_db_data"
 
 
 export default function Form({setSearchResults}) {
-    const [formData, setFormData] = useState(getDefaultFormData());
-
-    function getDefaultFormData() {
-        return {
-            searchField: ""
-        }
+    const defaultFormData = {
+        searchField: ""
     }
+    const [formData, setFormData] = useState(defaultFormData);
 
     function handleChange(event) {
         const { name, value } = event.target;
+
         setFormData(prevData => {
             return {
                 ...prevData,
@@ -29,7 +27,8 @@ export default function Form({setSearchResults}) {
     }
 
     useEffect(() => {
-        setSearchResults(filterColorData())
+        const filteredColorData = filterColorData()
+        setSearchResults(filterColorData)
     }, [formData])
 
     return (
