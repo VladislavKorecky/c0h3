@@ -1,9 +1,9 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import colorData from "../color_db_data"
 
 
-export default function Form() {
+export default function Form({setSearchResults}) {
     const [formData, setFormData] = useState(getDefaultFormData());
 
     function getDefaultFormData() {
@@ -28,7 +28,9 @@ export default function Form() {
         return results
     }
 
-    console.log(filterColorData())
+    useEffect(() => {
+        setSearchResults(filterColorData())
+    }, [formData])
 
     return (
         <form>
