@@ -1,8 +1,5 @@
 from flask import Flask
-
 from flask_cors import CORS
-
-from c0h3.controller.api.hello_world_controller import hello_world
 
 
 def create_app(config_dict: dict = None) -> Flask:
@@ -23,7 +20,5 @@ def create_app(config_dict: dict = None) -> Flask:
     # config setup
     if config_dict is not None:
         app.config.from_mapping(config_dict)
-
-    app.register_blueprint(hello_world)
 
     return app
