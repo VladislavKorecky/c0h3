@@ -15,10 +15,10 @@ import React from "react";
  * 
  * @component
  */
-export default function Form({setSearchResults}) {
+export default function SearchResultsDisplay({searchResults}) {
     return (
         <div>
-            
+
         </div>
     )
 }
