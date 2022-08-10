@@ -19,7 +19,7 @@ import React from "react";
 export default function SearchResultComponent({text}) {
     return (
         <div>
-
+            {text}
         </div>
     )
 }

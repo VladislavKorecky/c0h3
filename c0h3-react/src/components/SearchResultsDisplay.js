@@ -2,6 +2,8 @@
 
 import React from "react";
 
+import SearchResultComponent from "./SearchResultComponent";
+
 
 /**
  * Display component for displaying the results of a search.
@@ -16,9 +18,18 @@ import React from "react";
  * @component
  */
 export default function SearchResultsDisplay({searchResults}) {
+    // key for the SearchResultComponent, prevents "Unique 'key' Prop" warning
+    let componentKey = 0;
+
+    // maps the raw search results into UI
+    const searchResultComponents = searchResults.map(result => {
+        componentKey++; // increment the key
+        return <SearchResultComponent key={componentKey} text={result.text} />
+    })
+
     return (
         <div>
-
+            {searchResultComponents}
         </div>
     )
 }
