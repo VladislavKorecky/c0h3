@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: App.js</title>
+    <title>JSDoc: Source: components/SearchResultsDisplay.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: App.js</h1>
+    <h1 class="page-title">Source: components/SearchResultsDisplay.js</h1>
 
     
 
@@ -29,31 +29,36 @@
             <pre class="prettyprint source linenums"><code>// @ts-check
 
 import React from "react";
-import { useState } from "react";
 
-import Form from "./components/Form";
-import SearchResultsDisplay from "./components/SearchResultsDisplay";
+import SearchResultComponent from "./SearchResultComponent";
+
 
 /**
- * Root app component.
+ * Display component for displaying the results of a search.
+ * @see {@link Form} for more information about the search mechanics.
  * 
- * @returns {Object} - App component's JSX.
+ * Possible props:
+ *      searchResults - The "searchResults" state.
+ * 
+ * @param {Object} props - The React properties (props).
+ * @returns {Object} - Form component's JSX.
  * 
  * @component
  */
-export default function App() {
-    /**
-     * State that holds the results of a search.
-     * @see {@link Form} for the origin of the search results.
-     */
-    const [searchResults, setSearchResults] = useState([])
+export default function SearchResultsDisplay({searchResults}) {
+    // key for the SearchResultComponent, prevents "Unique 'key' Prop" warning
+    let componentKey = 0;
+
+    // maps the raw search results into UI
+    const searchResultComponents = searchResults.map(result => {
+        componentKey++; // increment the key
+        return &lt;SearchResultComponent key={componentKey} text={result.text} />
+    })
 
     return (
-        &lt;>
-            &lt;h1>Welcome to C0H3!&lt;/h1>
-            &lt;Form setSearchResults={setSearchResults} />
-            &lt;SearchResultsDisplay searchResults={searchResults} /> 
-        &lt;/>
+        &lt;div>
+            {searchResultComponents}
+        &lt;/div>
     )
 }</code></pre>
         </article>
