@@ -6,23 +6,16 @@ import Form from "./components/Form";
 /**
  * Root app component.
  * 
- * @type {function}
  * @returns {Object} - App component's JSX.
  * 
  * @component
  */
 export default function App() {
     /**
-     * Testing this out.
+     * State that holds the results of a search.
+     * @see {@link Form} for the origin of the search results.
      */
     const [searchResults, setSearchResults] = useState([])
-
-    /**
-     * Testing this our. But there is a twist!
-     * 
-     * @type {string}
-     */
-    const randomVar = "Lol"
 
     return (
         <>

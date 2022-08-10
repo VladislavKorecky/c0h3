@@ -1,5 +1,6 @@
 // @ts-check
 
+import React from "react";
 import { useEffect, useState } from "react"
 
 import colorData from "../color_db_data.json"
@@ -8,8 +9,10 @@ import colorData from "../color_db_data.json"
 /**
  * Form for searching through the color database.
  * 
- * @type {function}
- * @param {function} setSearchResults - The "setSearchResults" state setter.
+ * Possible props:
+ *      setSearchResults - A setter of "searchResults" state.
+ * 
+ * @param {Object} props - The React properties (props).
  * @returns {Object} - Form component's JSX.
  * 
  * @component
