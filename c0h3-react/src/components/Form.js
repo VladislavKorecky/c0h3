@@ -45,6 +45,16 @@ export default function Form({setSearchResults}) {
     }
 
     /**
+     * Handle the submit of a form. 
+     * The only current functionality is to prevent the default behaviour (reloading the page).
+     * 
+     * @param {Object} event - The event object passed in by React.
+     */
+    function handleSubmit(event) {
+        event.preventDefault()
+    }
+
+    /**
      * Filter through the color database by the text in the search field.
      * 
      * @returns {Object[]} - A filtered array.
@@ -64,11 +74,11 @@ export default function Form({setSearchResults}) {
      */
     useEffect(() => {
         const filteredColorData = filterColorData()
-        setSearchResults(filterColorData)
+        setSearchResults(filteredColorData)
     }, [formData])
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <input
                 type="text"
                 placeholder="Emotion/Effect"

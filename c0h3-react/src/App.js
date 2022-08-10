@@ -1,7 +1,10 @@
 // @ts-check
 
+import React from "react";
 import { useState } from "react";
+
 import Form from "./components/Form";
+import SearchResultsDisplay from "./components/SearchResultsDisplay";
 
 /**
  * Root app component.
@@ -21,6 +24,7 @@ export default function App() {
         <>
             <h1>Welcome to C0H3!</h1>
             <Form setSearchResults={setSearchResults} />
+            <SearchResultsDisplay searchResults={searchResults} /> 
         </>
     )
 }
