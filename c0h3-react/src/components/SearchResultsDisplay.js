@@ -18,13 +18,9 @@ import SearchResultComponent from "./SearchResultComponent";
  * @component
  */
 export default function SearchResultsDisplay({searchResults}) {
-    // key for the SearchResultComponent, prevents "Unique 'key' Prop" warning
-    let componentKey = 0;
-
     // maps the raw search results into UI
     const searchResultComponents = searchResults.map(result => {
-        componentKey++; // increment the key
-        return <SearchResultComponent key={componentKey} text={result.text} />
+        return <SearchResultComponent key={result.id} text={result.text} />
     })
 
     return (
