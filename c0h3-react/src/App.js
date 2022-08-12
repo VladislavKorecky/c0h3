@@ -7,6 +7,7 @@ import Form from "./components/Form";
 import SearchResultsDisplay from "./components/SearchResultsDisplay";
 
 import "./styles/base.scss"
+import "./styles/heading.scss"
 
 /**
  * Root app component.
