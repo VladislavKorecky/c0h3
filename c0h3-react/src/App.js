@@ -6,6 +6,8 @@ import { useState } from "react";
 import Form from "./components/Form";
 import SearchResultsDisplay from "./components/SearchResultsDisplay";
 
+import "./styles/base.scss"
+
 /**
  * Root app component.
  * 
