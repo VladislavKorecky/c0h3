@@ -14,8 +14,6 @@ import colorData from "../color_db_data.json"
  * 
  * @param {Object} props - The React properties (props).
  * @returns {Object} - Form component's JSX.
- * 
- * @component
  */
 export default function Form({setSearchResults}) {
     const defaultFormData = {

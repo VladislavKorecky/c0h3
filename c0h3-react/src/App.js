@@ -10,8 +10,6 @@ import SearchResultsDisplay from "./components/SearchResultsDisplay";
  * Root app component.
  * 
  * @returns {Object} - App component's JSX.
- * 
- * @component
  */
 export default function App() {
     /**

@@ -13,8 +13,6 @@ import React from "react";
  * 
  * @param {Object} props - The React properties (props).
  * @returns {Object} - Form component's JSX.
- * 
- * @component
  */
 export default function SearchResultComponent({text}) {
     return (
