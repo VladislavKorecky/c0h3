@@ -4,6 +4,8 @@ import React from "react";
 
 import SearchResultComponent from "./SearchResultComponent";
 
+import "../styles/search-result-display.scss"
+
 
 /**
  * Display component for displaying the results of a search.
@@ -22,7 +24,7 @@ export default function SearchResultsDisplay({searchResults}) {
     })
 
     return (
-        <div>
+        <div className="search-result-display">
             {searchResultComponents}
         </div>
     )

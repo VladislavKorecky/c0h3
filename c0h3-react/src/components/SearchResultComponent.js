@@ -2,6 +2,8 @@
 
 import React from "react";
 
+import "../styles/search-result-component.scss"
+
 
 /**
  * A single search result component.
@@ -16,7 +18,7 @@ import React from "react";
  */
 export default function SearchResultComponent({text}) {
     return (
-        <div>
+        <div className="search-result-component">
             {text}
         </div>
     )
