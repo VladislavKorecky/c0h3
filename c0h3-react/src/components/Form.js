@@ -5,6 +5,8 @@ import { useEffect, useState } from "react"
 
 import colorData from "../color_db_data.json"
 
+import "../styles/form.scss"
+
 
 /**
  * Form for searching through the color database.
