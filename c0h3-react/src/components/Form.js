@@ -5,6 +5,8 @@ import { useEffect, useState } from "react"
 
 import colorData from "../color_db_data.json"
 
+import "../styles/form.scss"
+
 
 /**
  * Form for searching through the color database.
@@ -14,8 +16,6 @@ import colorData from "../color_db_data.json"
  * 
  * @param {Object} props - The React properties (props).
  * @returns {Object} - Form component's JSX.
- * 
- * @component
  */
 export default function Form({setSearchResults}) {
     const defaultFormData = {

@@ -6,12 +6,13 @@ import { useState } from "react";
 import Form from "./components/Form";
 import SearchResultsDisplay from "./components/SearchResultsDisplay";
 
+import "./styles/base.scss"
+import "./styles/heading.scss"
+
 /**
  * Root app component.
  * 
  * @returns {Object} - App component's JSX.
- * 
- * @component
  */
 export default function App() {
     /**
