@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import "../../../styles/search-result-component.scss"
+import "styles/search-result-component.scss"
 
 
 /**
@@ -14,7 +14,7 @@ import "../../../styles/search-result-component.scss"
  *      text - A text/string to display.
  * 
  * @param {Object} props - The React properties (props).
- * @returns {Object} - Form component's JSX.
+ * @returns {Object} - Component's JSX.
  */
 export default function SearchResultComponent({text}) {
     return (

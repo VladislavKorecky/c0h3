@@ -4,7 +4,7 @@ import React from "react";
 
 import SearchResultComponent from "./search-results-component/SearchResultComponent";
 
-import "../../styles/search-result-display.scss"
+import "styles/search-result-display.scss"
 
 
 /**
@@ -15,7 +15,7 @@ import "../../styles/search-result-display.scss"
  *      searchResults - The "searchResults" state.
  * 
  * @param {Object} props - The React properties (props).
- * @returns {Object} - Form component's JSX.
+ * @returns {Object} - Component's JSX.
  */
 export default function SearchResultsDisplay({searchResults}) {
     // maps the raw search results into UI

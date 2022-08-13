@@ -3,9 +3,9 @@
 import React from "react";
 import { useEffect, useState } from "react"
 
-import colorData from "../../color_db_data.json"
+import colorData from "color_db_data.json"
 
-import "../../styles/form.scss"
+import "styles/form.scss"
 
 
 /**
@@ -15,7 +15,7 @@ import "../../styles/form.scss"
  *      setSearchResults - A setter of "searchResults" state.
  * 
  * @param {Object} props - The React properties (props).
- * @returns {Object} - Form component's JSX.
+ * @returns {Object} - Component's JSX.
  */
 export default function Form({setSearchResults}) {
     const defaultFormData = {
@@ -75,6 +75,7 @@ export default function Form({setSearchResults}) {
     useEffect(() => {
         const filteredColorData = filterColorData()
         setSearchResults(filteredColorData)
+        console.log("Was called")
     }, [formData])
 
     return (
