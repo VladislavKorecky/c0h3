@@ -3,9 +3,9 @@
 import React from "react";
 import { useEffect, useState } from "react"
 
-import colorData from "../color_db_data.json"
+import colorData from "../../color_db_data.json"
 
-import "../styles/form.scss"
+import "../../styles/form.scss"
 
 
 /**

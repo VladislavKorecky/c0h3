@@ -2,9 +2,9 @@
 
 import React from "react";
 
-import SearchResultComponent from "./SearchResultComponent";
+import SearchResultComponent from "./search-results-component/SearchResultComponent";
 
-import "../styles/search-result-display.scss"
+import "../../styles/search-result-display.scss"
 
 
 /**
