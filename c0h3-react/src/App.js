@@ -2,7 +2,8 @@
 
 import React from "react";
 
-import MainSection from "components/main-section/MainSection";
+import MainSection from "./components/main-section/MainSection";
+import SelectionBox from "./components/selection-box/SelectionBox";
 
 import "./styles/base.scss"
 
@@ -13,6 +14,10 @@ import "./styles/base.scss"
  */
 export default function App() {
     return (
-        <MainSection />
+        <>
+            <MainSection />
+            <SelectionBox name="positive" title="Positive emotions/effects" />
+            <SelectionBox name="negative" title="Negative emotions/effects" />
+        </>
     )
 }
