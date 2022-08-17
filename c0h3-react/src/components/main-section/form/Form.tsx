@@ -1,10 +1,16 @@
 // @ts-check
 
-import { useEffect, useState } from "react"
+import { FC, useEffect, useState } from "react"
 
 import colorData from "color_db_data.json"
+import ColorData from "../ColorData";
 
 import "styles/form.scss"
+
+
+interface Props {
+    setSearchResults: React.Dispatch<React.SetStateAction<ColorData[]>>
+}
 
 
 /**
@@ -16,7 +22,7 @@ import "styles/form.scss"
  * @param {Object} props - The React properties (props).
  * @returns {Object} - Component's JSX.
  */
-export default function Form({setSearchResults}) {
+const Form: FC<Props> = ({setSearchResults}) => {
     const defaultFormData = {
         searchField: "" // the text/data inside a search input field
     }
@@ -32,7 +38,7 @@ export default function Form({setSearchResults}) {
      * 
      * @param {Object} event - The event object passed in by React.
      */
-    function handleChange(event) {
+    function handleChange(event: { target: { name: any; value: any; }; }) {
         const { name, value } = event.target;
 
         setFormData(prevData => {
@@ -49,7 +55,7 @@ export default function Form({setSearchResults}) {
      * 
      * @param {Object} event - The event object passed in by React.
      */
-    function handleSubmit(event) {
+    function handleSubmit(event: { preventDefault: () => void; }) {
         event.preventDefault()
     }
 
@@ -89,4 +95,5 @@ export default function Form({setSearchResults}) {
             />
         </form>
     )
-}
+};
+export default Form;

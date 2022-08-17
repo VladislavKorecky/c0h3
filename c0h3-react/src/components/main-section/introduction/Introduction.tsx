@@ -8,8 +8,9 @@ import "styles/heading.scss"
  * 
  * @returns {Object} - Component's JSX.
  */
-export default function Introduction() {
+const Introduction = () => {
     return (
         <h1>Welcome to C0H3!</h1>
     )
-}
+};
+export default Introduction;

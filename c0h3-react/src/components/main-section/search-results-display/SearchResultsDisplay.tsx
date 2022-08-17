@@ -1,8 +1,18 @@
 // @ts-check
 
+import { FC } from "react";
+
 import SearchResultComponent from "./search-results-component/SearchResultComponent";
 
 import "styles/search-result-display.scss"
+
+
+interface Props {
+    searchResults: {
+        id: number,
+        text: string
+    }[]
+}
 
 
 /**
@@ -15,7 +25,7 @@ import "styles/search-result-display.scss"
  * @param {Object} props - The React properties (props).
  * @returns {Object} - Component's JSX.
  */
-export default function SearchResultsDisplay({searchResults}) {
+const SearchResultsDisplay: FC<Props> = ({searchResults}) => {
     // maps the raw search results into UI
     const searchResultComponents = searchResults.map(result => {
         return <SearchResultComponent key={result.id} text={result.text} />
@@ -26,4 +36,5 @@ export default function SearchResultsDisplay({searchResults}) {
             {searchResultComponents}
         </div>
     )
-}
+};
+export default SearchResultsDisplay;

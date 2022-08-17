@@ -10,7 +10,7 @@ import "./styles/base.scss"
  * 
  * @returns {Object} - App component's JSX.
  */
-export default function App() {
+const App = () => {
     return (
         <>
             <MainSection />
@@ -18,4 +18,5 @@ export default function App() {
             <SelectionBox name="negative" title="Negative emotions/effects" />
         </>
     )
-}
+};
+export default App;

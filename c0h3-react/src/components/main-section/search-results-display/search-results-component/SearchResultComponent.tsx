@@ -1,6 +1,13 @@
 // @ts-check
 
+import { FC } from "react";
+
 import "styles/search-result-component.scss"
+
+
+interface Props {
+    text: string
+}
 
 
 /**
@@ -14,10 +21,11 @@ import "styles/search-result-component.scss"
  * @param {Object} props - The React properties (props).
  * @returns {Object} - Component's JSX.
  */
-export default function SearchResultComponent({text}) {
+const SearchResultComponent: FC<Props> = ({text}) => {
     return (
         <div className="search-result-component">
             {text}
         </div>
     )
-}
+};
+export default SearchResultComponent;

@@ -1,5 +1,13 @@
 // @ts-check
 
+import { FC } from "react"
+
+
+interface Props {
+    name: string,
+    title: string
+}
+
 /**
  * Box for selected emotions/effects.
  * 
@@ -10,10 +18,13 @@
  * @param {Object} props - The React properties (props).
  * @returns {Object} - Component's JSX.
  */
-export default function SelectionBox({name, title}) {
+const SelectionBox: FC<Props> = ({name, title}) =>  {
+    console.log(name, title)
+
     return (
         <div>
             <h3>{title}</h3>
         </div>
     )
-}
+};
+export default SelectionBox;
