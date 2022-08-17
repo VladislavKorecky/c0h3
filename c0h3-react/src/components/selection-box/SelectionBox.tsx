@@ -1,8 +1,5 @@
 // @ts-check
 
-import React from "react";
-
-
 /**
  * Box for selected emotions/effects.
  * 
@@ -14,8 +11,6 @@ import React from "react";
  * @returns {Object} - Component's JSX.
  */
 export default function SelectionBox({name, title}) {
-    console.log(name)
-
     return (
         <div>
             <h3>{title}</h3>

@@ -1,7 +1,5 @@
 // @ts-check
 
-import React from "react";
-
 import SearchResultComponent from "./search-results-component/SearchResultComponent";
 
 import "styles/search-result-display.scss"

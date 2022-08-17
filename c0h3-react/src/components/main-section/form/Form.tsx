@@ -1,6 +1,5 @@
 // @ts-check
 
-import React from "react";
 import { useEffect, useState } from "react"
 
 import colorData from "color_db_data.json"
@@ -65,7 +64,9 @@ export default function Form({setSearchResults}) {
 
         // the filtering process based on the starting string/part
         // (executed by the startsWith() function)
-        const results = colorDataValues.filter((sample) => sample.text.startsWith(formData.searchField));
+        const results = colorDataValues.filter((sample) => {
+            return sample.text.startsWith(formData.searchField)
+        });
         return results
     }
 
@@ -75,7 +76,6 @@ export default function Form({setSearchResults}) {
     useEffect(() => {
         const filteredColorData = filterColorData()
         setSearchResults(filteredColorData)
-        console.log("Was called")
     }, [formData])
 
     return (

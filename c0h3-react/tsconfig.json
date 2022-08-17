@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src",
+        "jsx": "react-jsx",
+
+        // json import fix
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+      },
+    "include": ["src"]
+}

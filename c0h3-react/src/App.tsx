@@ -1,7 +1,5 @@
 // @ts-check
 
-import React from "react";
-
 import MainSection from "./components/main-section/MainSection";
 import SelectionBox from "./components/selection-box/SelectionBox";
 
