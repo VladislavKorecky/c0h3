@@ -18,9 +18,7 @@ interface Props {
  * @param {Object} props - The React properties (props).
  * @returns {Object} - Component's JSX.
  */
-const SelectionBox: FC<Props> = ({name, title}) =>  {
-    console.log(name, title)
-
+const SelectionBox: FC<Props> = ({name, title}): JSX.Element =>  {
     return (
         <div>
             <h3>{title}</h3>

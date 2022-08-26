@@ -1,5 +1,7 @@
 // @ts-check
 
+import { FC } from "react";
+
 import MainSection from "./components/main-section/MainSection";
 import SelectionBox from "./components/selection-box/SelectionBox";
 
@@ -10,7 +12,7 @@ import "./styles/base.scss"
  * 
  * @returns {Object} - App component's JSX.
  */
-const App = () => {
+const App: FC = (): JSX.Element => {
     return (
         <>
             <MainSection />

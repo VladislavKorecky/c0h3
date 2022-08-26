@@ -13,7 +13,7 @@ import SearchResultsDisplay from "./search-results-display/SearchResultsDisplay"
  * 
  * @returns {Object} - Component's JSX.
  */
-const MainSection: FC = () => {
+const MainSection: FC = (): JSX.Element => {
     /**
      * State that holds the results of a search.
      * @see {@link Form} for the origin of the search results.

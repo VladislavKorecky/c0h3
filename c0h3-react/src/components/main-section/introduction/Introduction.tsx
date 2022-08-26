@@ -8,7 +8,7 @@ import "styles/heading.scss"
  * 
  * @returns {Object} - Component's JSX.
  */
-const Introduction = () => {
+const Introduction = (): JSX.Element => {
     return (
         <h1>Welcome to C0H3!</h1>
     )

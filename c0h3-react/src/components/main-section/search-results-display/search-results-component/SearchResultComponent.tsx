@@ -21,7 +21,7 @@ interface Props {
  * @param {Object} props - The React properties (props).
  * @returns {Object} - Component's JSX.
  */
-const SearchResultComponent: FC<Props> = ({text}) => {
+const SearchResultComponent: FC<Props> = ({text}): JSX.Element => {
     return (
         <div className="search-result-component">
             {text}

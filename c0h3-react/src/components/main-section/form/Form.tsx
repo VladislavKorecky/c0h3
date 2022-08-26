@@ -22,8 +22,10 @@ interface Props {
  * @param {Object} props - The React properties (props).
  * @returns {Object} - Component's JSX.
  */
-const Form: FC<Props> = ({setSearchResults}) => {
-    const defaultFormData = {
+const Form: FC<Props> = ({setSearchResults}): JSX.Element => {
+    const defaultFormData: {
+        searchField: string
+    } = {
         searchField: "" // the text/data inside a search input field
     }
     /**

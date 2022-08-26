@@ -25,9 +25,9 @@ interface Props {
  * @param {Object} props - The React properties (props).
  * @returns {Object} - Component's JSX.
  */
-const SearchResultsDisplay: FC<Props> = ({searchResults}) => {
+const SearchResultsDisplay: FC<Props> = ({searchResults}): JSX.Element => {
     // maps the raw search results into UI
-    const searchResultComponents = searchResults.map(result => {
+    const searchResultComponents: JSX.Element[] = searchResults.map(result => {
         return <SearchResultComponent key={result.id} text={result.text} />
     })
 
