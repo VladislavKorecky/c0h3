@@ -1,6 +1,4 @@
-// @ts-check
-
-import React from "react";
+import { FC } from "react";
 
 import MainSection from "./components/main-section/MainSection";
 import SelectionBox from "./components/selection-box/SelectionBox";
@@ -10,9 +8,10 @@ import "./styles/base.scss"
 /**
  * Root app component.
  * 
- * @returns {Object} - App component's JSX.
+ * @type {FC}
+ * @returns {JSX.Element} - App component's JSX.
  */
-export default function App() {
+const App: FC = (): JSX.Element => {
     return (
         <>
             <MainSection />
@@ -20,4 +19,5 @@ export default function App() {
             <SelectionBox name="negative" title="Negative emotions/effects" />
         </>
     )
-}
+};
+export default App;

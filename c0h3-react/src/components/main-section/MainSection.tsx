@@ -1,8 +1,8 @@
 // @ts-check
 
-import React from "react";
-import { useState } from "react";
+import { FC, useState } from "react";
 
+import ColorData from "./ColorData"
 import Form from "./form/Form";
 import Introduction from "./introduction/Introduction";
 import SearchResultsDisplay from "./search-results-display/SearchResultsDisplay";
@@ -11,14 +11,15 @@ import SearchResultsDisplay from "./search-results-display/SearchResultsDisplay"
 /**
  * Main section of the page. Contains the introduction, form and the form results.
  * 
- * @returns {Object} - Component's JSX.
+ * @type {FC}
+ * @returns {JSX.Element} - Component's JSX.
  */
-export default function MainSection() {
+const MainSection: FC = (): JSX.Element => {
     /**
      * State that holds the results of a search.
      * @see {@link Form} for the origin of the search results.
      */
-     const [searchResults, setSearchResults] = useState([])
+     const [searchResults, setSearchResults] = useState<ColorData[]>([])
 
     return (
         <main>
@@ -27,4 +28,5 @@ export default function MainSection() {
             <SearchResultsDisplay searchResults={searchResults} />
         </main>
     )
-}
+};
+export default MainSection;
