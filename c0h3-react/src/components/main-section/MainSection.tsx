@@ -11,7 +11,8 @@ import SearchResultsDisplay from "./search-results-display/SearchResultsDisplay"
 /**
  * Main section of the page. Contains the introduction, form and the form results.
  * 
- * @returns {Object} - Component's JSX.
+ * @type {FC}
+ * @returns {JSX.Element} - Component's JSX.
  */
 const MainSection: FC = (): JSX.Element => {
     /**

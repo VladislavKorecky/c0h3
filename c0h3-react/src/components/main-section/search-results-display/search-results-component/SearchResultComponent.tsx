@@ -5,6 +5,9 @@ import { FC } from "react";
 import "styles/search-result-component.scss"
 
 
+/**
+ * Interface for React props.
+ */
 interface Props {
     text: string
 }
@@ -18,10 +21,11 @@ interface Props {
  * Possible props:
  *      text - A text/string to display.
  * 
- * @param {Object} props - The React properties (props).
- * @returns {Object} - Component's JSX.
+ * @type {FC<Props>}
+ * @param {Props} props - The React properties (props).
+ * @returns {JSX.Element} - Component's JSX.
  */
-const SearchResultComponent: FC<Props> = ({text}): JSX.Element => {
+const SearchResultComponent: FC<Props> = ({text}: Props): JSX.Element => {
     return (
         <div className="search-result-component">
             {text}

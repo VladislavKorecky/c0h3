@@ -3,6 +3,9 @@
 import { FC } from "react"
 
 
+/**
+ * Interface for React props.
+ */
 interface Props {
     name: string,
     title: string
@@ -15,10 +18,11 @@ interface Props {
  *      name - A unique name (id) for the box.
  *      title - A title/text of the box.
  * 
- * @param {Object} props - The React properties (props).
- * @returns {Object} - Component's JSX.
+ * @type {FC<Props>}
+ * @param {Props} props - The React properties (props).
+ * @returns {JSX.Element} - Component's JSX.
  */
-const SelectionBox: FC<Props> = ({name, title}): JSX.Element =>  {
+const SelectionBox: FC<Props> = ({name, title}: Props): JSX.Element =>  {
     return (
         <div>
             <h3>{title}</h3>

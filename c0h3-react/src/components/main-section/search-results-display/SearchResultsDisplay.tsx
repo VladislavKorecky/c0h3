@@ -7,6 +7,9 @@ import SearchResultComponent from "./search-results-component/SearchResultCompon
 import "styles/search-result-display.scss"
 
 
+/**
+ * Interface for React props.
+ */
 interface Props {
     searchResults: {
         id: number,
@@ -22,10 +25,11 @@ interface Props {
  * Possible props:
  *      searchResults - The "searchResults" state.
  * 
- * @param {Object} props - The React properties (props).
- * @returns {Object} - Component's JSX.
+ * @type {FC<Props>}
+ * @param {Props} props - The React properties (props).
+ * @returns {JSX.Element} - Component's JSX.
  */
-const SearchResultsDisplay: FC<Props> = ({searchResults}): JSX.Element => {
+const SearchResultsDisplay: FC<Props> = ({searchResults}: Props): JSX.Element => {
     // maps the raw search results into UI
     const searchResultComponents: JSX.Element[] = searchResults.map(result => {
         return <SearchResultComponent key={result.id} text={result.text} />

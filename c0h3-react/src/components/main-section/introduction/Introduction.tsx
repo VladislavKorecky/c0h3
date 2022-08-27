@@ -1,14 +1,17 @@
 // @ts-check
 
+import { FC } from "react";
+
 import "styles/heading.scss"
 
 
 /**
  * An introduction section of the page.
  * 
- * @returns {Object} - Component's JSX.
+ * @type {FC}
+ * @returns {JSX.Element} - Component's JSX.
  */
-const Introduction = (): JSX.Element => {
+const Introduction: FC = (): JSX.Element => {
     return (
         <h1>Welcome to C0H3!</h1>
     )

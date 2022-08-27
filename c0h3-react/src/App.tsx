@@ -1,5 +1,3 @@
-// @ts-check
-
 import { FC } from "react";
 
 import MainSection from "./components/main-section/MainSection";
@@ -10,7 +8,8 @@ import "./styles/base.scss"
 /**
  * Root app component.
  * 
- * @returns {Object} - App component's JSX.
+ * @type {FC}
+ * @returns {JSX.Element} - App component's JSX.
  */
 const App: FC = (): JSX.Element => {
     return (
