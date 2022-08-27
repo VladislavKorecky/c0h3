@@ -42,8 +42,12 @@
     ]
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.3.1",
     "@types/react": "^18.0.17",
     "jsdoc": "^3.6.11",
     "sass": "^1.54.4"
+  },
+  "overrides": {
+    "@svgr/webpack": "$@svgr/webpack"
   }
 }
